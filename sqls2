@@ -1,0 +1,93 @@
+namespace adodb;
+
+public class SQLs
+{
+    static public string socrBaseSql = @"
+        SELECT [LEVEL],
+               [SCNAME],
+               [SOCRNAME],
+               [KOD_T_ST]
+        FROM dbo.[SOCRBASE];
+    ";
+    static public string altNamesSql = @"
+        SELECT [LEVEL],
+               [OLDCODE],
+               [NEWCODE]
+        FROM dbo.[ALTNAMES];
+    ";
+
+    static public string kladrSql = @"
+        SELECT [CODE],
+               [NAME],
+               [SOCR],
+               [INDEX],
+               [GNINMB],
+               [UNO],
+               [OCATD],
+               [STATUS]
+        FROM dbo.[KLADR];
+    ";
+
+    static public string streetSql = @"
+        SELECT [CODE],
+               [NAME],
+               [SOCR],
+               [INDEX],
+               [GNINMB],
+               [UNO],
+               [OCATD]
+        FROM dbo.[STREET];
+    ";
+
+    static public string domaSql = @"
+        SELECT [CODE],
+               [NAME],
+               [KORP],
+               [SOCR],
+               [INDEX],
+               [GNINMB],
+               [UNO],
+               [OCATD]
+        FROM dbo.[DOMA];
+    ";
+
+    static public string streetsActualSql = @"
+        SELECT [KladrCode],
+               [KladrSubCode],
+               [AreaCode],
+               [DistrictCode],
+               [CityCode],
+               [TownCode],
+               [StreetCode],
+               [ActualityStatus],
+               [KladrLevel],
+               [KladrName],
+               [KladrSocr],
+               [KladrSocrName],
+               [KladrIndex],
+               [KladrGninmd],
+               [KladrUno],
+               [KLadrOkatd]
+        FROM [kladr].[dbo].[v_street];
+    ";
+
+    static public string kladrActualSql = @"
+        SELECT [KladrCode],
+               [KladrSubCode],
+               [AreaCode],
+               [DistrictCode],
+               [CityCode],
+               [TownCode],
+               [KladrLevel],
+               [ActualityStatus],
+               [KladrName],
+               [KladrSocr],
+               [KladrSocrName],
+               [KladrIndex],
+               [KladrGninmb],
+               [KladrUno],
+               [KladrOcatd],
+               [KladrStatus]
+        FROM [kladr].[dbo].[v_kladr];
+    ";
+}
