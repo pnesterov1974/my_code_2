@@ -1,0 +1,14 @@
+namespace enums
+{
+    public enum TargetTable
+    {
+        SocrBase,
+        AltNames,
+        Kladr,
+        Streets,
+        Doma,
+        KladrActual,
+        StreetActual,
+        DomaActual
+    }
+}
